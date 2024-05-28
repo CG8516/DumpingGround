@@ -4,7 +4,7 @@
 
 
 
-## EasyFPSEditor_CE_DEV_2024-05-28_1605 : (1.11 alpha test 1)
+## [EasyFPSEditor_CE_DEV_2024-05-28_1605](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-05-28_1605.exe) : (1.11 alpha test 1)
 - flashlight state [0/1]
 - flashlight lock [0/1]
 - flashlight range [range]
