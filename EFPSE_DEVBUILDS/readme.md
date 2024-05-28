@@ -1,0 +1,46 @@
+## EasyFPSEditor_CE_DEV_2024-05-28_1605 : (1.11 alpha test 1)
+- flashlight state [0/1]
+- flashlight lock [0/1]
+- flashlight range [range]
+- flashligh colour [r] [g] [b]
+- flashlight radius [radius]
+- SETVAR PLAYERDISTANCE
+- SETVAR PLAYERVISIBLE
+- hud mask (same as hud image syntax but masks images on the same layer)
+- weapon limit increased to 1024 (requires manual weapon.dat modification, editor support not complete yet)
+- light ambient [r] [g] [b] [a]
+- light sun colour [r] [g] [b] [a]
+- light sun direction [x] [y] [z]
+- skybox texture Path/To/Texture.png
+- fog colour [r] [g] [b]
+- fog distance [dist]
+- shader texture [uniformName] [Path/To/Texture.png]
+- shader bool [uniformName] [0/1 or true/false]
+- shader int [uniform] [int value]
+- shader float [uniform] [float value]
+- shader vec2 [uniform] [x] [y]
+- shader vec3 [uniform] [x] [y] [z]
+- shader vec4 [uniform] [x] [y] [z] [w]
+- light offset [x] [y] [z] (moves light without updating its tile position, allowing lights to be moved around without needing to recalculate the new position)
+- Many advanced math commands (SIN,COS,TAN,ASIN,ACOS,ATAN,ATAN2,POWER,SQRT,ABS,FLOOT,CEIL,CLAMP,MIN,MAX,ROUND). varX=SIN($varY)
+- Build mode improvements for 3d models
+- Tile textures will now look for Textures/tileName_normal.png and Textures/tileName_dxnormal.png to optionally use normal maps (in opengl or directx format) on walls/floors (models to come in full release)
+- Md3 models will look for modelname_material.png When loading (eg; if model 'tree' has two materials 'bark' and 'leaves', it will try to load 'tree_bark.png' and 'tree_leaves.png')
+- Player y-rotation limit can be applied by modifying game.dat (editor support and script command will be in 1.11 release)
+- Enemy/Decoration rotation mode can be changed by modifying game.dat (editor support coming in 1.11 release)
+- Various issues have been fixed
+- Various issues have been added
+- Probably a bunch of things I forgot to mention
+
+Some of these changes may be completely broken, so testers would be greatly appreciated :)  
+Remaining plans for 1.11:
+- Editor preferences menu
+- External editor language files
+- Editor colour schemes/themes
+- Update editor to support the new features (weapon/floor counts, flashlight adjustments, rotation mode, y-rotation limit)
+- Support normal maps for md3's
+- Add all this new data to the save file format, so the previous state is restored properly on load
+- Possibly some velocity commands/actions (needs investigation)
+- Potentially increase level height to 64 (need to do some performance testing)
+- Maybe a new variable scope that's always kept after death (Checkpoints, life counters, achievements, gameplay stats, etc...)
+- More bug fixes
