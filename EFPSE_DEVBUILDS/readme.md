@@ -2,6 +2,17 @@
 #### Due to the high chance of bugs/issues, you run a much greater risk of corrupting your project.
 ## Always backup your projects before trying a new development build.
 
+## [2024-05-31_1216](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-05-31_1216.exe) : (1.11 alpha test 2)  
+- Added preferences menu.
+- Initial support for editor translations (any .yaml files in the 'Languages' folder will be added as a language in the preferences menu).
+- Started adding a dark theme (Needs work. Default theme looks different right now, and winforms adds borders to everything that aren't all easy to change).
+- Testing a different spawn method for the 'SPAWN' fsm action (probably broken).
+- Added checkbox in game info configurator for weapon sprite smoothing (might move to in-game graphics menu).
+- Added checkbox in game info configurator for entity rotation mode.
+- Added number box in game info config for vertical camera rotation limit.
+- Added crouch height to the player configurator.
+- Added ability to add new weapons in the editor.
+- Fix distance culling issue when using cube skyboxes.
 
 
 ## [EasyFPSEditor_CE_DEV_2024-05-28_1605](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-05-28_1605.exe) : (1.11 alpha test 1)
