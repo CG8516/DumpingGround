@@ -2,6 +2,12 @@
 #### Due to the high chance of bugs/issues, you run a much greater risk of corrupting your project.
 ## Always backup your projects before trying a new development build.
 
+## [2025-06-01 1025](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-01_1025.exe) : (1.11 alpha test 3)
+- Normal maps are now smoothed when texture interpolation is enabled
+- Fixed cube skybox rendering height
+- Added a wireframe cheat (very useful, I know)
+- Weapons/sprites can now be positioned and scaled in the editor by dragging and scrolling
+
 ## [2024-05-31_1216](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-05-31_1216.exe) : (1.11 alpha test 2)  
 - Added preferences menu.
 - Initial support for editor translations (any .yaml files in the 'Languages' folder will be added as a language in the preferences menu).
