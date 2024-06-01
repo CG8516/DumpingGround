@@ -2,7 +2,16 @@
 #### Due to the high chance of bugs/issues, you run a much greater risk of corrupting your project.
 ## Always backup your projects before trying a new development build.
 
-## [2025-06-01 1025](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-01_1025.exe) : (1.11 alpha test 3)
+## [2025-06-01_1443](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-01_1443.exe) : (1.11 alpha 4)
+- Added "player velocity [set/add] [x] [y] [z]" command.
+- Added 'db.' variable scope. 'db' values are saved to the Saves/db.txt file, offering a form of persistent storage that isn't tied to a save file. (File writes aren't optimised yet, probably terrible in looping scripts right now).
+- A 'global.deltaTime' variable will be set and automatically updated for looping scripts, providing the amount of seconds which have passed since the last frame.
+- Fixed an issue that could break triggers if any of them were set to an audio file instead of a script.
+- Fixed an issue that would cause meshes without a normal map to be rendered with one.
+- Fixed an issue that would cause some tiles to be rendered without their normal map applied.
+- Added normal map support for md3 models (modelName_normal.png, and modelName_materialName_normal.png for each material)
+
+## [2025-06-01_1025](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-01_1025.exe) : (1.11 alpha test 3)
 - Normal maps are now smoothed when texture interpolation is enabled
 - Fixed cube skybox rendering height
 - Added a wireframe cheat (very useful, I know)
