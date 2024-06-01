@@ -66,13 +66,13 @@
 
 Some of these changes may be completely broken, so testers would be greatly appreciated :)  
 Remaining plans for 1.11:
-- Editor preferences menu
-- External editor language files
+- ~~Editor preferences menu~~
+- ~~External editor language files~~
 - Editor colour schemes/themes
-- Update editor to support the new features (weapon/floor counts, flashlight adjustments, rotation mode, y-rotation limit)
-- Support normal maps for md3's
+- Update editor to support the new features (~~weapon~~/floor counts, flashlight adjustments, ~~rotation mode, y-rotation limit~~)
+- ~~Support normal maps for md3's~~
 - Add all this new data to the save file format, so the previous state is restored properly on load
-- Possibly some velocity commands/actions (needs investigation)
+- ~~Possibly some velocity commands/actions (needs investigation)~~
 - Potentially increase level height to 64 (need to do some performance testing)
-- Maybe a new variable scope that's always kept after death (Checkpoints, life counters, achievements, gameplay stats, etc...)
+- ~~Maybe a new variable scope that's always kept after death (Checkpoints, life counters, achievements, gameplay stats, etc...)~~
 - More bug fixes
