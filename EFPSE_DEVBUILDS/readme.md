@@ -2,7 +2,19 @@
 #### Due to the high chance of bugs/issues, you run a much greater risk of corrupting your project.
 ## Always backup your projects before trying a new development build.
 
-## [2025-06-01_1443](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-01_1443.exe) : (1.11 alpha 4)
+## [2024-06-02_1013](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-02_1013.exe) : (1.11 alpha 5)
+#### WARNING: THIS UPDATE WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
+Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
+- Increased max floor count to 64.
+- Map files are now trimmed to the highest floor with data (if your highest tile/entity is on floor 4, Only floors 1-4 will be saved).
+- Reduced the editor's memory usage to roughly 1/3 of what it was.
+- Added 'JUMPIFNOAMMOTOTAL' fsm action, because 'no ammo' really means 'no mag ammo'.
+- Added 'AMMO' and 'MAGAMMO' as SETVAR options.
+- Added the ability to toggle muzzleflash for individual weapons.
+- Fixed an editor crash when decoration/enemy sprite scale is set to a negative or a non-number value.
+- Fixed weapon scale not working correctly in some regions.
+
+## [2024-06-01_1443](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-01_1443.exe) : (1.11 alpha 4)
 - Added "player velocity [set/add] [x] [y] [z]" command.
 - Added 'db.' variable scope. 'db' values are saved to the Saves/db.txt file, offering a form of persistent storage that isn't tied to a save file. (File writes aren't optimised yet, probably terrible in looping scripts right now).
 - A 'global.deltaTime' variable will be set and automatically updated for looping scripts, providing the amount of seconds which have passed since the last frame.
@@ -11,7 +23,7 @@
 - Fixed an issue that would cause some tiles to be rendered without their normal map applied.
 - Added normal map support for md3 models (modelName_normal.png, and modelName_materialName_normal.png for each material)
 
-## [2025-06-01_1025](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-01_1025.exe) : (1.11 alpha test 3)
+## [2024-06-01_1025](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-01_1025.exe) : (1.11 alpha test 3)
 - Normal maps are now smoothed when texture interpolation is enabled
 - Fixed cube skybox rendering height
 - Added a wireframe cheat (very useful, I know)
