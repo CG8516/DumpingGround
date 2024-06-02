@@ -2,6 +2,9 @@
 #### Due to the high chance of bugs/issues, you run a much greater risk of corrupting your project.
 ## Always backup your projects before trying a new development build.
 
+## [2024-06-02_1031](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-02_1031.exe) : (1.11 alpha 6)
+- Fix off-by-one error with CUSTOMPARTICLE IDs
+
 ## [2024-06-02_1013](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-02_1013.exe) : (1.11 alpha 5)
 #### WARNING: THIS UPDATE WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
