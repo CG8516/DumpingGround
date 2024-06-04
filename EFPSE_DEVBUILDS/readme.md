@@ -5,6 +5,44 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-06-04_1230](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-04_1230.exe) : (1.11 alpha 7)
+- Hud images/masks are now scaled with screen resolution
+- Added "hud rotate [image/mask name] [rotation]" (angle in degrees)
+- Added "hud scale [image/mask name] [x] [y]" (1 = original size, 0.5 = half size, etc..)
+- Added "hud origin [image/mask name] [x: 0-1] [y: 0-1]" (Sets point within the image where position/scaling/rotation will be based on. Default is top-left corner at 0,0)
+- Fixed 3d model textures not loading correctly when 'per-pixel lighting' is disabled.
+
+I started improving the 'sequence animator' a few updates ago but forgot to mention it.  
+It's a feature that allows you to animate the camera and entities.  
+JessicoChan added it a while ago but for unknown reasons never documented it publicly.  
+It hasn't been tested much, but I figure it's worth documenting here for anyone who wants to try it out now.  
+  
+In a script file, call "sequence start [sequenceName]"  
+It will search for a .seq file in the 'Sequences' folder, eg: Sequences/sequenceName.seq  
+seq files have the following syntax:  
+
+- action camera - Animate the camera.  
+- action entity [x] [y] [z] - Animate an entity at the specified x,y,z coordinates.  
+- start [x] [y] [z] - Position to start animation from.  
+- end [x] [y] [z] - Position to end animation on.  
+- rotationstart [x] [y] [z] - The rotation at the start of the sequence.  
+- rotationend [x] [y] [z] - The rotation at the end of the sequence.  
+- statestart [state name] - State to set the entity to when the sequence starts.  
+- stateend [state name] - State to set the entity to after the sequence ends.  
+- time [seconds] - How long the animation will run.  
+- parallel - Allows more than one sequnce to run at the same time.  
+
+Here's an example of a camera animation:  
+> action camera  
+start 7 6 0.5  
+end 7 15 0.5  
+rotationstart 0 0 0  
+rotationend 0 360 0  
+time 2  
+
+This will animate the camera for two seconds from 7,6,0.5 to 7,15,0.5, rotating 360 degrees in the y-axis.  
+Save it as Sequences/demo.seq, and call it from a script with: "sequence start demo"
+
 ## [2024-06-02_1031](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-02_1031.exe) : (1.11 alpha 6)
 - Fix off-by-one error with CUSTOMPARTICLE IDs
 
