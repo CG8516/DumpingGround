@@ -9,7 +9,7 @@
 - Hud images/masks are now scaled with screen resolution
 - Added "hud rotate [image/mask name] [rotation]" (angle in degrees)
 - Added "hud scale [image/mask name] [x] [y]" (1 = original size, 0.5 = half size, etc..)
-- Added "hud origin [image/mask name] [x: 0-1] [y: 0-1]" (Sets point within the image where position/scaling/rotation will be based on. Default is top-left corner at 0,0)
+- Added "hud origin [image/mask name] [x: 0 to image width] [y: 0 to image height]" (Sets point within the image where position/scaling/rotation will be based on. Default is top-left corner at 0,0)
 - Fixed 3d model textures not loading correctly when 'per-pixel lighting' is disabled.
 
 I started improving the 'sequence animator' a few updates ago but forgot to mention it.  
