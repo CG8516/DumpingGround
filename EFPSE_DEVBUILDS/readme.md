@@ -5,6 +5,11 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-06-04_2008](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-04_2008.exe) : (1.11 alpha 8)
+- Added "hud autoscale [image/mask name] [stretch/width/height/off]" command.
+- Added "settings check resolution [resX] [resY]" command.
+- Fixed rectangle fill tool in the editor.
+
 ## [2024-06-04_1230](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-04_1230.exe) : (1.11 alpha 7)
 - Hud images/masks are now scaled with screen resolution
 - Added "hud rotate [image/mask name] [rotation]" (angle in degrees)
@@ -125,10 +130,10 @@ Remaining plans for 1.11:
 - ~~Editor preferences menu~~
 - ~~External editor language files~~
 - Editor colour schemes/themes
-- Update editor to support the new features (~~weapon~~/floor counts, flashlight adjustments, ~~rotation mode, y-rotation limit~~)
+- Update editor to support the new features (~~weapon/floor counts,~~ flashlight adjustments, ~~rotation mode, y-rotation limit~~)
 - ~~Support normal maps for md3's~~
 - Add all this new data to the save file format, so the previous state is restored properly on load
 - ~~Possibly some velocity commands/actions (needs investigation)~~
-- Potentially increase level height to 64 (need to do some performance testing)
+- ~~Potentially increase level height to 64 (need to do some performance testing)~~
 - ~~Maybe a new variable scope that's always kept after death (Checkpoints, life counters, achievements, gameplay stats, etc...)~~
 - More bug fixes
