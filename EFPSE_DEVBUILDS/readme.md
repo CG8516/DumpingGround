@@ -5,6 +5,15 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-06-07_0052](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-07_0052.exe) : (1.11 alpha 9)
+- Fixed doors being stuck closed if the 'door close' command is used.
+- The 'bind' command can now be used from any scripts.
+- Added the 'unbind [key]' command to remove an existing keybind.
+- Holding the left/right arrows in build mode will cycle through the numbers.
+- The map editor is now reset properly when creating/loading projects.
+- The 'console' keybind can be changed in the [input] section of config.ini. Default is: "console=tilde"
+- Prevent things being spawned with the "SPAWN" fsm action moving slightly towards the player.
+
 ## [2024-06-04_2008](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-04_2008.exe) : (1.11 alpha 8)
 - Added "hud autoscale [image/mask name] [stretch/width/height/off]" command.
 - Added "settings check resolution [resX] [resY]" command.
