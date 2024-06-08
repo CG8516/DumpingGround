@@ -5,8 +5,12 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-06-08_1214](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-08_1214.exe) : (1.11 alpha 12)
+- More transparent rendering fixes.
+- Fixed a crash when launching a game with no weapons added.
+
 ## [2024-06-08_0025](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-08_0025.exe) : (1.11 alpha 11)
-- Lots of rendering fixes
+- Lots of transparent rendering fixes.
 
 ## [2024-06-07_2041](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-07_2041.exe) : (1.11 alpha 10)
 - Use alpha blending instead of alpha clipping.
