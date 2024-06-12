@@ -5,6 +5,14 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-06-12_1110](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-12_1110.exe) : (1.11 alpha 13)
+- Fixed forward velocity parameter for 'SPAWN' fsm action (wrong direction, and enemies weren't moving properly)
+- Fixed a one-frame input interruption when exiting a script with 'quickreturn'
+- Fixed weapon range not being saved/loaded correctly in some regions
+- Fixed gaps in tile placement when drawing quickly with the mouse.
+- 'import' button in weapon sound editor was incorrectly labelled as 'accept'
+- Removed unused 'Game font' item from the system resources importer.
+
 ## [2024-06-08_1214](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-08_1214.exe) : (1.11 alpha 12)
 - More transparent rendering fixes.
 - Fixed a crash when launching a game with no weapons added.
