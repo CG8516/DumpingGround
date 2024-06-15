@@ -5,6 +5,19 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-06-16_0119](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-16_0119.exe) : (1.11 alpha 14)
+- Added speed parameter for vn textboxes (text string [r] [g] [b] [characters per second, default is 80]).
+- Improved vn textbox scaling.
+- Looping scripts are now executed while other scripts are running, unless vn mode is active.
+- Improved projectile collision detection.
+- Fixed entities spawned with forward velocity not having collision (will still go through walls if spawned in front of player when standing next to a wall)
+- Fixed a crash when killing an entity spawned with forward velocity.
+
+Just a sidenote...  
+If you have a game that was built with an older version of the engine and don't have access to the project files, you can still apply the latest engine fixes.  
+The engine is almost 100% backwards-compatible with all versions from around v1.5 and later, so you can replace the Game.exe from an older game with one that was exported with a later engine update, and it will have all the latest fixes applied automatically.  
+Might be useful if you're hosting a game jam and want the latest fixes applied to all the games ;)  
+
 ## [2024-06-12_1110](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-12_1110.exe) : (1.11 alpha 13)
 - Fixed forward velocity parameter for 'SPAWN' fsm action (wrong direction, and enemies weren't moving properly)
 - Fixed a one-frame input interruption when exiting a script with 'quickreturn'
