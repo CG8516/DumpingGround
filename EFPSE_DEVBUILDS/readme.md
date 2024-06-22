@@ -5,6 +5,17 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-06-23_0030](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-23_0030.exe) : (1.11 alpha 15)
+- Fixed enemies spawned with a forward velocity not 'bouncing' or being affected by a collision with a wall.
+- Fixed a crash that could occur if an enemy was deleted from a project.
+- Fixed an editor crash when the currently-selected weapon/ammo/hp/key/armour sprite is replaced.
+- Fixed a culling issue when looking up and down near large decorations.
+- Fixed vn mode with looping scripts (broke in last update).
+- Made it harder for swarms of enemies to push the player out of bounds.
+- Creating a weapon will now create placeholder weapon and ammo sprites (instead of a decoration sprite...).
+- Added a 'knockback' stat for enemies, allowing enemy attacks to push the player back.
+- Added tooltips for enemies and decorations that were placed on the map.
+
 ## [2024-06-16_0119](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-16_0119.exe) : (1.11 alpha 14)
 - Added speed parameter for vn textboxes (text string [r] [g] [b] [characters per second, default is 80]).
 - Improved vn textbox scaling.
