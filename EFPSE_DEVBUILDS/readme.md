@@ -5,6 +5,9 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-06-23_2001](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-23_2001.exe) : (1.11 alpha 17)
+- Added sfml error output to startup.log (may help with finding issues)
+
 ## [2024-06-23_0112](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-23_0112.exe) : (1.11 alpha 16)
 - Fixed player collision with non-cube tiles (accidentally broke in alpha 15)
 
