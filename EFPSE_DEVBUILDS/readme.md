@@ -5,6 +5,14 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-06-27_1436](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-27_1436.exe) : (1.11 alpha 18)
+- Fixed player colliding with enemy barrier blocks (Broke in Alpha 15).
+- Fixed an editor crash when dragging the rectangle-fill outside of the map bounds.
+- Adjusted some editor UI elements to avoid long translation text getting cut short.
+- Fixed a crash that would occur if you tried to create a decoration after your project's Sprites/Decorations folder was deleted (same for enemies, weapons, etc..)
+- Added debug output when loading the pixellighting shader to startup.log
+- Fixed a bug causing the player's weapons to disappear if a map script ends with 'map goto' or 'map next' instead of 'map start'
+
 ## [2024-06-23_2001](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-23_2001.exe) : (1.11 alpha 17)
 - Added sfml error output to startup.log (may help with finding issues)
 
