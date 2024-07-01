@@ -5,6 +5,17 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-01_1553](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-01_1553.exe) : (1.11 alpha 19)
+- Fixed videos not scaling to the game resolution when starting from a script.
+- Menu checkbox text can now be changed with the 'mcheckboxstyle' command in menu.script files.  
+		mcheckboxstyle "Off" "Hover Off" "Hover On" "On"  
+		eg; mcheckboxstyle No -No- -Yes- Yes  
+- Weapon outline scale now respects the 'outlinewidth' setting
+- Fixed crash when a weapon has a 3d ammo model, but not a 3d view model
+- The colour picker now matches the editor's theme
+- Made 'light sun direction' align with the same xyz directions in the map editor
+- Fixed crash when 'player check rotation' is used without specifying both an x and y output variable
+
 ## [2024-06-27_1436](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-06-27_1436.exe) : (1.11 alpha 18)
 - Fixed player colliding with enemy barrier blocks (Broke in Alpha 15).
 - Fixed an editor crash when dragging the rectangle-fill outside of the map bounds.
