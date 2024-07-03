@@ -5,6 +5,13 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-03_2015](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-03_2015.exe) : (1.11 alpha 20)
+- Fixed menu checkbox flickering.
+- Added 'player check aimtile [tileX] [tileY] [tileZ]'. It will store the coordinates of whatever tile the player is looking at. If the player isn't looking at a tile, all coordinates will be set to -1.
+- Sounds started from triggers/scripts will no longer be interrupted if many other in-game sounds are played.
+- Fixed an editor crash when using the enemy or decoration editor before creating a map.
+- Fixed a crash that could occur when reloading a level.
+
 ## [2024-07-01_1553](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-01_1553.exe) : (1.11 alpha 19)
 - Fixed videos not scaling to the game resolution when starting from a script.
 - Menu checkbox text can now be changed with the 'mcheckboxstyle' command in menu.script files.  
