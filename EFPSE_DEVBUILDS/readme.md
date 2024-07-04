@@ -5,6 +5,13 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-04_1555](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-04_1555.exe) : (1.11 alpha 21)
+- Fixed broken slope and cornerslope modifiers when using negative scales/positions.
+- Fixed enemies with negative forward velocity moving through walls.
+- Added "settings set scale [$scale]" to set the current render scale.
+- Prevent maps being created/opened without opening a project first.
+- Prevent any editors/importers from being used before a project is opened.
+
 ## [2024-07-03_2015](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-03_2015.exe) : (1.11 alpha 20)
 - Fixed menu checkbox flickering.
 - Added 'player check aimtile [tileX] [tileY] [tileZ]'. It will store the coordinates of whatever tile the player is looking at. If the player isn't looking at a tile, all coordinates will be set to -1.
