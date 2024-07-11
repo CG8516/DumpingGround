@@ -5,6 +5,9 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+ ## [2024-07-11_2236](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-11_2236.exe) : (1.11 alpha 24)
+- Armour amount is now transferred between levels.
+
  ## [2024-07-11_2043](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-11_2043.exe) : (1.11 alpha 23)
 - Fixed a rendering issue when using the 'settings set scale' command.
 - Improved performance of the 'settings set scale' command.
