@@ -5,6 +5,17 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+ ## [2024-07-11_2043](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-11_2043.exe) : (1.11 alpha 23)
+- Fixed a rendering issue when using the 'settings set scale' command.
+- Improved performance of the 'settings set scale' command.
+- Fixed test mode not working when the project has a space in its name.
+- map start/return is now optional. Scripts will automatically insert a 'map start' or 'map return 2' at the end if you don't include your own.
+- Fixed weapon mag and ammo not transferring between maps.
+- Spawned 3d model rotation/scale is now restored properly when loading save data (old savefiles will not load with this version).
+- Improved sprite scaling with the scrollwheel (now scales proportionally, making it more useful at both higher and lower scales).
+- Added a game setting to prevent enemy stacking.
+- Maps can now have more than one exit.
+
 ## [2024-07-04_2134](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-04_2134.exe) : (1.11 alpha 22)
 - Fixed create/open map buttons not appearing after creating or opening an empty project (broke in last update)
 
