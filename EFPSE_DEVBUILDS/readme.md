@@ -5,6 +5,13 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-13_0000](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-13_0000.exe) : (1.11 alpha 25)
+- Fix enemies getting stuck on tiles/decorations.
+- Fixed player teleport.
+- Added ability to execute single-line script commands from the console with ';' eg: ";player teleport 1 2 3".
+- Moved textboxes back up to where they were before the scaling changes were added.
+- Fixed rendering issue when using multiple camera actions in a sequence animation.
+
  ## [2024-07-11_2236](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-11_2236.exe) : (1.11 alpha 24)
 - Armour amount is now transferred between levels.
 
