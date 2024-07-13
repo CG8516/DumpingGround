@@ -5,6 +5,12 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-13_1819](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-13_1819.exe) : (1.11 alpha 26)
+- Added complete door state to savefile data (open state, lock status, etc..).
+- Enemies spawned with forward force from a weapon will now have collision as soon as they leave the player's radius, instead of when the velocity reaches 0.
+- Enemies spawned with a forward velocity should now work properly even if their state changes (not 100% sure because I couldn't reproduce the issue).
+- Fixed a crash when accessing variables from a dev console command.
+
 ## [2024-07-13_0000](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-13_0000.exe) : (1.11 alpha 25)
 - Fix enemies getting stuck on tiles/decorations.
 - Fixed player teleport.
