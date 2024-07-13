@@ -5,6 +5,12 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-14_0023](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-14_0023.exe) : (1.11 alpha 29)
+- Fixed map script being partially re-executed when a savefile is loaded.  
+- Fixed editor crash when opening the game info configurator if the currently selected 'starting weapon' was removed.  
+- Fixed invisible door collision if the game is saved/loaded while a door is open.  
+- Attempt to prevent enemies getting stuck on eachother.  
+
 ## [2024-07-13_2149](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-13_2149.exe) : (1.11 alpha 28)
 - Fixed crash related to enemies spawned with forward velocity.
 
