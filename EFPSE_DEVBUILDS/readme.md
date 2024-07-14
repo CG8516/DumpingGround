@@ -5,6 +5,13 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-14_1111](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-14_1111.exe) : (1.11 alpha 30)
+- Fixed crash when moving to the next map if there are no weapons in the game.
+- Fixed an issue causing video playback to get stuck.
+- Videos are now skippable.
+- Added 'timeout video' command to wait until the current video has finished.
+- Added lights to savedata.
+
 ## [2024-07-14_0023](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-14_0023.exe) : (1.11 alpha 29)
 - Fixed map script being partially re-executed when a savefile is loaded.  
 - Fixed editor crash when opening the game info configurator if the currently selected 'starting weapon' was removed.  
