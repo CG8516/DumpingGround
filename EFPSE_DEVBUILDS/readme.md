@@ -5,6 +5,17 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-17_0044](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-17_0044.exe) : (1.11 alpha 31)
+- Fixed multi-texture model rendering if 'merge with level geometry' is checked.
+- Fixed potential Enemies.dat corruption when opening a project.
+- Creating a map will now ask for a map name instead of a file path (file location was ignored anyway).
+- Added an option to disable fog culling (Terrible for performance, but avoids a rendering issue when using cylinder/cube skyboxes).
+- Added map button tooltips to the language file.
+- Fixed a crash while closing the game (maybe I should have left it in for faster closing times?).
+- Fixed a culling issue when the player or entities are above the highest-placed tile.
+- Added a checkbox to make a 3d model double-sided (bad for performance, but useful for thin geometry like grass).
+- Fix light data not being loaded properly from savefiles.
+
 ## [2024-07-14_1111](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-14_1111.exe) : (1.11 alpha 30)
 - Fixed crash when moving to the next map if there are no weapons in the game.
 - Fixed an issue causing video playback to get stuck.
@@ -235,7 +246,7 @@ Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' be
 - flashlight state [0/1]
 - flashlight lock [0/1]
 - flashlight range [range]
-- flashligh colour [r] [g] [b]
+- flashlight colour [r] [g] [b]
 - flashlight radius [radius]
 - SETVAR PLAYERDISTANCE
 - SETVAR PLAYERVISIBLE
