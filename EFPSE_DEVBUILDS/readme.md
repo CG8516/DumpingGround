@@ -5,6 +5,23 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-21_1858](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-21_1858.exe) : (1.11 alpha 32)
+- Title screens can now optionally be videos (Titles/Authors1.vid instead of Titles/Authors1.png).
+- Added option to make 3d models always rotate to face the player.
+- Initial support for new 3d model formats: fbx, gltf/glb, dae, obj. These formats currently only support static models, as they use a different animation method to md3 files.
+- Added "player jumpheight [$height]" (default is 256).
+- Fixed crash when using 'map next' as a single-line console command ";map next".
+- Fixed stats not transferring to next level when "map next" command is used.
+- Fixed new maps not having the .eem extension.
+- Fixed 3d decoration collision when using an offset with a scale other than 1.
+- Fixed 3d decoration collision when spawning a decoration with fsm.
+- Fixed crash when a projectile-shooting enemy is created after multiple consecutive enemies were deleted.
+- Fixed a crash when loading a project after deleting a tile texture.
+
+This will probably the last 1.11 alpha that adds new features.  
+I'll be focusing on bug fixes and small improvements to the existing features to prepare for a release on itch.io.  
+
+
 ## [2024-07-17_0044](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-17_0044.exe) : (1.11 alpha 31)
 - Fixed multi-texture model rendering if 'merge with level geometry' is checked.
 - Fixed potential Enemies.dat corruption when opening a project.
