@@ -5,6 +5,39 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-29_1706](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-29_1706.exe) : (1.11 alpha 33)
+- 'Authors' screens will no longer show when using 'test current map' in the editor.
+- Made the editor more usable at lower screen resolutions.
+- Added an 'Auto fit' button to the weapon position/scale editor, making it easier to find large weapon sprites.
+- The editor will automatically update pixellighting.frag if it's missing or if an older version is detected (will not overwrite it if you've made any changes to the file).
+- Muzzleflash is now a colour picker instead of a checkbox and also works for melee weapons. Adjust the alpha value to adjust the flash strength.
+- Loop scripts will now work while the player is dead.
+- Improved 3d enemy rotation in flee/chase states.
+- Added ROTMODE fsm action to override the 3d model rotation mode. 0 = normal, 1 = always face player, 2 = freeze rotation.
+- Added SETYAW and ADDYAW fsm actions to override the model's yaw.
+- Added hud images/masks to savedata.
+- Added all fsm state info to savedata.
+- Added 'saveauto' and 'loadauto' for accessing auto saves from menu.script.
+- Added optional emissive textures if per-pixel lighting is enabled (TextureName_emissive.png in the same folder).
+- Fixed unlit 3d decorations when per-pixel lighting is enabled.
+- Fixed the flashlight flashbang when per-pixel lighting is enabled.
+- Fixed 'flashlight range' when per-pixel lighting is enabled.
+- Fixed depth sorting with 3d weapon muzzleflash (again...).
+- Fixed the sprite/weapon scale editor not changing with the scrollwheel if the scale is near 0.
+- Fixed the 'player check maxarmour' command.
+- Fixed comments causing issues in state files.
+- Fixed 'tab' characters causing issues in state files.
+- Fixed 'bind' command causing vn-like delay when used in a normal script.
+- Fixed variable copying (a=$b) not working in scripts.
+- Fixed yaw being ignored for 3d enemies.
+- Fixed decoration model yaw being ignored when 'always face player' is checked.
+- Fixed crash when replacing the weapon's idle sprite after using the 'position and scale' editor.
+- Fixed a crash caused by having a blank custom modifier name.
+- Fixed a bug that could cause enemy hitboxes to shrink after loading.
+- Fixed CAMSPEED not working in FSM.
+- Fixed nested 'if' statements in the script engine.
+
+
 ## [2024-07-21_1858](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-21_1858.exe) : (1.11 alpha 32)
 - Title screens can now optionally be videos (Titles/Authors1.vid instead of Titles/Authors1.png).
 - Added option to make 3d models always rotate to face the player.
