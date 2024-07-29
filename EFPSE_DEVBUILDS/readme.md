@@ -5,6 +5,9 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-29_2248](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-29_2248.exe) : (1.11 alpha 36)
+- Fixed a scripting issue when multiple '}' are put on the same line (I'll stop now)
+
 ## [2024-07-29_2218](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-29_2218.exe) : (1.11 alpha 35)
 - Fixed an issue processing 'if' statements if the '{' is placed on the next line.
 - Reduced 'directional snapping' with scripted player velocities.
