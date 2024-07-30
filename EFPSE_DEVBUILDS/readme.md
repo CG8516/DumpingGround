@@ -5,6 +5,13 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-07-30_1403](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-30_1403.exe) : (1.11 alpha 37)
+- Fix crash when closing weapon pos/scale editor if an idle sprite hasn't been loaded.
+- Fixed gravity not being reset when starting a new game.
+- Added player jump height to save data.
+- Fixed ROTMODE with multiple 3d enemies/decorations of the same type.
+- Fixed inaccurate yaw offset for 3d enemies.
+
 ## [2024-07-29_2248](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-29_2248.exe) : (1.11 alpha 36)
 - Fixed a scripting issue when multiple '}' are put on the same line (I'll stop now)
 
