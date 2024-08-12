@@ -5,6 +5,9 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-08-12_1147](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-12_1147.exe) : (1.11 alpha 39)
+- Allow variables to be used with 'SPAWN' fsm actions.
+
 ## [2024-08-12_1015](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-12_1015.exe) : (1.11 alpha 38)
 - Fixed MODELTEXTURE fsm action affecting other entities of the same type.
 - Fixed a player shadow rendering issue.
