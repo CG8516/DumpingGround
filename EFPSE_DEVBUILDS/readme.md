@@ -5,6 +5,34 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024-08-12_1015](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-12_1015.exe) : (1.11 alpha 38)
+- Fixed MODELTEXTURE fsm action affecting other entities of the same type.
+- Fixed a player shadow rendering issue.
+- Fixed a crash when a video is used for a startup title.
+- Fixed title screens showing when opening the menu if the game was launched with 'test current map'.
+- Fixed another crash caused by blank custom modifier names.
+- Fixed 3d enemy hitboxes sometimes being sized incorrectly when spawned.
+- Fixed z offset for 3d weapon FSM's.
+- Fixed fps counter not showing values below 22.
+- Fixed a flickering issue with per-pixel lighting. You may have to delete Shaders/PixelLighting.frag if this fix isn't applied automatically.
+- Fixed issue with 3d weapon models being removed when importing a world/view/ammo model with a different name.
+- Fixed normal/emissive textures on doors.
+- Fixed the map floor being reset to 1 when closing some editor dialogues.
+- Fixed position-based rotation for pickups.
+- Fixed floor/wall textures not having spaces replaced with underscores during import.
+- Fixed texture coordinates for gltf and fbx models.
+- Fixed 90-degree rotation of gltf models.
+- Bloom strength can now be set below 0.1.
+- MODELTEXTURE fsm action can now optionally update normals and emissive textures: "MODELTEXTURE [path] [variable] [update normals? 0/1] [update emissive? 0/1]
+- Added an option to allow 3d weapons to use a 2d muzzleflash without needing to add a 'muzzle' plane to the model.
+- Added a 'Test Current Map' button next to the 'Test Game' button.
+- Added 'hud text [name] [string] [font size] [x] [y] [r] [g] [b] [layer]' command. (use the same name to update previous text).
+- Added 'hud active [0/1]' to hide/show all hud elements.
+- Added game config option to disable weapon switching with the number keys.
+- Added 'HEAL/HURT/SETHP [hp]' fsm actions.
+- Added 'settings check/set timescale [var/value]' for adjusting gameplay and audio speed. Default is 1.
+- ~~Added sex.~~
+
 ## [2024-07-30_1403](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-07-30_1403.exe) : (1.11 alpha 37)
 - Fix crash when closing weapon pos/scale editor if an idle sprite hasn't been loaded.
 - Fixed gravity not being reset when starting a new game.
