@@ -5,6 +5,39 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024_08_22_0136](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-22_0136.exe) : (1.11 alpha 40)
+- Fixed scripts sometimes restarting during a map start/return.
+- Fixed broken texture animations for the first loaded tile.
+- Fixed normal/emissive maps with animated textures.
+- Fixed wall tile rendering when the editor is used with WINE on linux.
+- Fixed muzzleflash affecting 2d weapon sprite transparency.
+- Fixed an issue that would cause some decorations to be culled, even when 'disable culling' is checked.
+- Many improvements to script safety, making it harder to crash your game with a bad script file.
+- Many script issues will now be logged to the startup.log file when they're encountered.
+- Added various other minor improvements to the script engine (for example: 'bind w test.script' and 'bind w test' will both work now)
+- Added ROTMODE 3, allowing you to set a 3d model's rotation directly, rather than just its yaw.
+- Added 'cheat [cheatcode] [scriptname]' command, so you can create custom cheats. (type directly while playing, not in console)
+- Added optional volume and pan parameters to 'play sound' and 'play music': 'play sound/music [soundName/musicPath] [volume] [pan]' (volume 1 = normal, 0.5 = half, etc.. Can only make sounds quieter.) (pan 0 = left, 0.5 = middle, 1 = right. Only works with mono sounds)
+- Deprecated 'entity spawnat/pos' in favour of three new commands:  
+&nbsp;&nbsp;&nbsp;&nbsp;entity spawn tile [entity] [x] [y] [z] [rotation]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Spawns an entity directly in the middle of a specified tile (same as 'entity spawnat')  
+&nbsp;&nbsp;&nbsp;&nbsp;entity spawn precise [entity] [x] [y] [z] [rotation]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Spawns an entity at an exact tile position like: 13.2 14.5 12.91  
+&nbsp;&nbsp;&nbsp;&nbsp;entity spawn relative [entity] [x] [y] [z] [rotation]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Same as 'spawn precise', but the position is added to the position of the decoration, terminal, trigger, or player.  
+- Map music will now continue where it left off if a script ends with 'map (quick)return 1/2' without any scripted music playing.
+- Improved performance of layer-switching in the editor.
+- Made various other performance improvements.
+- Made some **huge** improvements to tile and outline rendering performance.
+- ~~removed sex~~
+
+Deprecated commands will *not* be removed, and will continue to work as expected.  
+In fact, right now I'd recommend the deprecated commands over the new ones, as the new ones haven't been tested thoroughly yet.  
+But when 1.11 is final, the deprecated commands will not be recommended anymore, and they will be removed from the manual.  
+My goal is to unify all the commands, so that everything will use the same x/y/z units.  
+I find '1.5 tiles' to be much easier to use than '96 units', and I think new users in particular will benefit from this change.  
+
+
 ## [2024-08-12_1147](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-12_1147.exe) : (1.11 alpha 39)
 - Allow variables to be used with 'SPAWN' fsm actions.
 
