@@ -5,6 +5,9 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024_08_22_2010](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-22_2010.exe) : (1.11 alpha 43)
+- Fixed scripted music ignoring the music volume setting.
+
 ## [2024_08_22_1842](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-22_1842.exe) : (1.11 alpha 42)
 - Reverted an optimisation which was causing MODELTEXTURE to affect all model instances.
 - Reverted optimisations to outline rendering, as it was causing many visual issues.
