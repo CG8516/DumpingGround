@@ -5,6 +5,9 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024_08_22_1416](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-22_1416.exe) : (1.11 alpha 41)
+- Fixed a light rendering issue.
+
 ## [2024_08_22_0136](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-22_0136.exe) : (1.11 alpha 40)
 - Fixed scripts sometimes restarting during a map start/return.
 - Fixed broken texture animations for the first loaded tile.
