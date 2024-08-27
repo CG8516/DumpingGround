@@ -5,6 +5,14 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2024_08-27_2027](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-27_2027.exe) : (1.11 alpha 44)
+- Fixed rendering issues caused by the 'fog distance' command setting an incorrect fog start position.  
+- Fixed model rendering issue when 'render all geometry' is checked in the map editor.  
+- Fixed 'light offset' command. (lights weren't updating for tiles, y/z were flipped, incorrect unit-scale) (light offset [tileX] [tileY] [tileZ] [offsetX] [offsetY] [offsetZ])  
+- More tile rendering performance improvements.   
+- Added 'entity spawn unit [entity] [unitX] [unitY] [unitZ] [rotation]'.  
+- Added "CHECKPOS [varX] [varY] [varZ]" fsm action for storing the decoration/enemy position in the specified variables.  
+
 ## [2024_08_22_2010](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-22_2010.exe) : (1.11 alpha 43)
 - Fixed scripted music ignoring the music volume setting.
 
