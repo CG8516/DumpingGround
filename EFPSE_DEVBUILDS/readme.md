@@ -5,6 +5,103 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2025-07-10_2120](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-07-10_2120.exe) : (1.11 alpha 45)
+
+All saves made in alpha 44 should be compatible with this build, and any 'broken' saves which crashed in alpha 44 should now load without crashing.  
+There are a couple of potentially-breaking changes, so make sure you read those and do some testing prior to release.  
+I recommend waiting at least a week to see if additional alpha builds get released, as it's possible some new bugs were introduced.  
+
+### Potentially breaking changes:
+- CHECKPOS no longer returns a negative y-axis. (you will need to adjust any fsm/script that used variables from this, as manually inverting the y-axis is no longer required)
+- FSM has been fixed so it no longer skip actions when the frame time is lower than 1/fps (eg if running at 60fps: 1/60 = 0.0166, so fsm frames quicker than 0.0166 could be skipped). If you have an existing FSM which was affected by this issue, it may behave differently now. Frame delays of 0 are also now possible.
+
+### New Features:
+- Added a per-map option for baking placed lights into vertex colours. This avoids visual errors for maps with many dense lights, without the performance penalty of increasing lighting quality. It doesn't affect lights placed with scripts. This requires an update to PixelLighting.frag and PixelLighting.vert, you may need to manually delete these files if the update isn't applied automatically.
+- Added 'player bobspeed [speed]' command, allowing you to override the viewbob speed (use it after 'player speed', otherwise it will be overwritten).
+- Added 'invertx' and 'inverty' checkbox options to menu.script and config.ini, allowing mouse x/y to be inverted (create a new project to get the new menu.script)
+- Added optional automatic backups to the editor. If enabled, this will create incremental backups every 5 minutes and whenever a project is opened, if any files have been changed since the last backup.  
+A new button in the project list will allow you to restore to any previous backup.
+- Added buttons to duplicate and rotate custom modifiers
+
+### General Improvements:
+- Made mouse movement much more consistent (switched to raw input)
+- Added more bindable keys, avoiding the issue of some keybinds not saving when relaunching the game.
+- When a script/fsm fails to convert text into a number (eg when you use a variable without a $), the issue will be logged to startup.log and 0 will be used.
+- Improved indentation support in scripts
+- 'Merge with level geometry' is now unchecked by default for new models (won't affect existing models)
+- Per-pixel-lighting is now enabled by default when config.ini is missing
+- Config.ini for the test build is now copied to the built game folder
+- Resolution changes now apply instantly, rather than requiring a restart
+- Decreased default item/injury flash opacity for new games
+- Decreased default map ambient brightness
+- Added 'ALPHA 45' to the editor title, to make support easier
+- The entire 'map properties' panel now scrolls when the screen resolution is too low to fit everything
+- Improved editor compatibility with mono (generally performs better than wine on linux)
+
+### Performance improvements:
+- 'skybox texture' now caches skyboxes instead of reloading them each time it's called (animated skyboxes run decently now)
+- General FSM performance improvements
+- Improved performance of entity movement/collision
+- Reduced performance impact of 'hud image/mask/text' commands in loop scripts
+- Improved launch times for games with high-resolution weapon sprites
+
+### Fixes:
+- Many lighting issues
+- Many rendering/scaling issues at resolutions/ratios other than 1280x720/16:9
+- Projectiles could sometimes go through enemies
+- Some 3d models wouldn't spawn when loading a save
+- Cryllic text with 'status' and 'hud text'
+- A crash caused by solid 3d decorations when there was a gap in decoration ID's
+- JUMPIFNOAMMO, JUMPIFNOAMMOTOTAL and JUMPIFHPLESS could continue executing actions in the original state after jumping
+- SETVAR AMMO and MAGAMMO didn't work
+- SETVAR HP always returned MAXHP instead
+- SETVAR HP/MAXHP didn't work for weapons (now returns player's hp/maxhp)
+- SETYAW/ADDYAW FSM actions would crash when a variable was used instead of a number
+- Mouse wasn't locked to the game window
+- Bullet/projectile spread didn't work when looking directly up/down
+- 'player speed' ignored viewbob scale when calculating new viewbob speed
+- HP could go below 0
+- Using 'map next' or 'map goto' could make the first weapon temporarily show on screen, even if the weapon wasn't owned.
+- Camera could clip through floor if player died while crouched
+- z-fighting when an entity spawns an item
+- Config.ini with a high resolution should no longer create a window larger than the native resolution
+- Spawn weapon/ammo didn't work above 9 (eg Weapon12)
+- Map scripts would restart if the player spammed inputs, which could also cause the pause menu text to disappear.
+- Enemies couldn't walk on invisible or barrier tiles.
+- 3d weapons were using normal/emissive textures for the muzzleflash plane
+- RANDOM, POWER, etc only worked with =, rather than +=,-=, etc..
+- Crash when there were more hud images than masks
+- Crash when a 3d FSM used a frame number higher than the number of frames in the model
+- The custom modifiers list wouldn't create a scrollbar when full
+- 3D Decorations/Enemies with 'merge with level geometry' were being duplicated when saving/loading.
+- Inaccurate line numbers for logged script errors
+- Crash when spawning a particle with a missing/invalid texture
+- Spark textures weren't spread when aiming directly up/down
+- Large 'spark' particle images weren't centered correctly
+- -data argument was ignored when Data.pak was present
+- Crash when pressing delete in the 3d model editor and no entity was selected.
+- Sometimes a crash could happen when loading a save.
+- Invalid startup.log entry claiming to load model "" when models.dat ended with an empty line.
+- Crash when Game.exe is used with an old Data.pak which has no skybox
+- Player could get stuck on floor if healed after death.
+- Crash when 'skybox texture' command was used on a map which didn't have a skybox.
+- Many script/fsm stability issues (Most script errors should now be logged into startup.log, and script execution will attempt to continue after an error occurs)
+- Status command would show '0' if any variables in the text hadn't been assigned
+- Jumping while under a circle modifier or entity caused the player's y position to be set to 0
+- Editor sometimes crashed while attempting to delete old builds/folders
+- Scripted sun/ambient light settings weren't saved
+- Scripted weapon stats weren't saved
+- Starting a new game after scripting sun/ambient light or weapon stats caused the changes to carry over to the new game.
+- 2D muzzleflash for 3d weapons wouldn't work when posteffects was enabled.
+- 'settings set scale' caused zoomed/skewed rendering issues
+- Sequences started from a map script could cause the player jump sound to play continuously every frame after the map restarts
+- 'Manual' button didn't work
+- Game would freeze if the pause menu was opened while a halted VN script was running, when using 'test current map'
+- Camera would be frozen if map was changed or a game was loaded while a sequence was playing
+- If a game was saved near an open door, entities on the other side of the door would be invisible until the door was closed and opened again.
+- Various other random issues (memory leaks, unnoticable crash while game is closing, etc..)
+
+
 ## [2024_08-27_2027](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2024-08-27_2027.exe) : (1.11 alpha 44)
 - Fixed rendering issues caused by the 'fog distance' command setting an incorrect fog start position.  
 - Fixed model rendering issue when 'render all geometry' is checked in the map editor.  
