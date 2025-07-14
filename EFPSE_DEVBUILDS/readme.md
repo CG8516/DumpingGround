@@ -5,6 +5,41 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2025-07-14_1655](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-07-14_1655.exe) : (1.11 alpha 46)
+
+### Changes:
+- Temporarily disabled the auto-backup feature, as it causes too much editor slow-down and instability right now
+- Holding 't' or 'g' in build mode will now quickly scroll the entity list
+
+### Performance improvements:
+- Enemy/weapon raycasts are now faster when shooting down
+- Decals and particles perform better now
+
+### Fixes:
+- Removed secret x-ray vision feature when changing screen resolution
+- Weapon movement animations were 'jumpy'
+- Enabling 'player turn 1' could buffer mouse inputs and then cause the player to rotate when 'player turn 0' was called later
+- Having many lights could cause weapon flickering
+- Muzzleflash would still show with an alpha set to 0
+- Weapons would show their muzzleflash colour while the flashlight was enabled
+- Tilt direction was inverted when using a controller
+- Improved depth sorting for transparent 3d models
+- Transparent particles could cause rendering issues with transparent tiles
+- Weapons wouldn't enter custom "DRAW" state if the previous weapon had a "HOLSTER" state
+- Weapons wouldn't play the draw sound (aka "Pull out" or "Cock" ;) when switching from a weapon with a custom "HOLSTER" state
+- Editor would crash while importing a trigger sound if the 'Voices' folder was missing
+- Potential editor crash when trying to load language files
+- 3D decoration models weren't shown in build mode unless the level had one of the models already placed
+- There was an added delay when using map next/goto/start
+- 'player check rotation' during a sequence would return the sequence camera's rotation rather than the player's rotation
+- A potential failure during build/pack
+- A performance issue + memory leak when loading sounds in a loop script (kept loading new sounds every frame instead of re-using the old ones)
+- Improved enemy collisions with ceilings when spawned with an upward velocity
+
+(A few new requested features will be coming in the next build, I wanted to prioritise stability first before adding anything new)
+
+
+
 ## [2025-07-10_2120](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-07-10_2120.exe) : (1.11 alpha 45)
 
 All saves made in alpha 44 should be compatible with this build, and any 'broken' saves which crashed in alpha 44 should now load without crashing.  
