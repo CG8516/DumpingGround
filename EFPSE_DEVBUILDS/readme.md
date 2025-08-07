@@ -5,6 +5,84 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2025-08-07_2145](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-08-07_2145.exe) : (1.11 alpha 47)
+
+### BREAKING CHANGE:
+- "player check rotation" no longer returns a value offset by 90. Any scripts which used this will need to be adjusted.
+
+### Potentially breaking changes:
+- Active/scripted decorations can now be accessed from above/below
+- Enemies with a radius of 0 will no longer be hit by projectiles or collide with the player
+
+### General changes:
+- Changed some terminology in the editor to be more descriptive (eg changed "Use Active Decorations On Button Press Only" to "Require button press to collect pickups")
+- Spark and blood particles can no longer affect particles created with the PARTICLES/CUSTOMPARTICLE commands.
+- Tweaked default stats of new enemies/weapons to make them more instantly usable. (projectile speed, reload speed, fire rate, mag size, recoil recovery)
+
+### New features:
+- Arrays can now be used in scripts and fsm's. "x = $map.var[$a]" "whatever[-10]["wtf"][$hi] += 3". Infinite dimensions are supported and there are no sizes.
+- Advanced math functions can now be used with 'setvar' in fsm (eg: SETVAR x MIN(3,7))
+- Added menu sounds (System resources importer allows unique sounds for hover, click, and when you hit the upper/lower limit of a range)
+- Projectile height can now be changed in the enemy editor (0 = at feet, 1 = at head, 0.5 = middle)
+- Decoration script interaction mode can now be changed to behave more like triggers (ideal for creating custom pickups without needing fsm + loop scripts, or as movable triggers).
+- Added the 'colliders' cheat to show the colliders for triggers, entities, and invisible/hazard/enemy-barrier tiles.
+- Added 'game save quick' and 'game load quick' to manually overwrite/load the player's quicksaves (that's rude, bro)
+- Added 'player weapon draw [slot]' command, to force the player to draw a specific weapon if they aren't already holding it.
+- Added 'quit' script command to instantly close the game
+- Added an alternate form of 'player camspeed' and CAMSPEED. Original command still works the same, but now you can also do "player camspeed [speedX] [speedY]" to have different speeds for each axis
+- Added three new menu options for allowing script keybinds to be changed, and for modifying db.variables: 
+  - minput [posX] [posY] [scriptName.script] [pageNumber]
+  - mrange [posX] [posY] [db.varName] [min] [max] [step] [defaultValue] [pageNumber]  ('step' is how much to subtract/add when clicking left/right)
+  - mcheckbox [posX] [posY] [db.varName] [defaultValue (0/1)] [pageNumber]
+- Added hud configurator option to only show 'spare' ammo, rather than a total that also includes the bullets in the mag. Enabled by default for new projects.
+
+### Experimental features:
+- Texture compression. Automatically compresses textures which are larger than 64x64, and have a width/height that are both a multiple of 4 (eg 128\*128, 256\*256, 1280\*720). Can reduce VRAM, but may introduce visual artifacts.
+- Chunk occlusion culling. Can help performance, but could potentially reduce performance in some scenarios (more testing needed to verify).  
+
+Both are disabled by default, but can be enabled in config.ini. You'll need to click 'apply' in the in-game settings menu if they aren't already in config.ini.
+
+
+### Performance changes:
+- Better performance for tile rendering and static 3d models (most noticable when using geometry subdivision or with high-poly static 3d models)
+- Worse performance for collision code (required to fix some issues).
+- Various minor script/fsm performance improvements.
+- Greatly reduced performance impact of holding a key-bound script that ends with 'map quickreturn' (eg sprint/swim scripts)
+
+### Fixes:
+- Enemies could sometimes evolve the super-human ability to see through walls. 
+- Player could clip through the floor when falling from a very tall height.
+- Player could clip through ceilings. More testing needed to confirm if it's completely fixed, but I haven't been able to break it yet with these changes. 
+- Player was unable to travel through floors while noclip + build was enabled.
+- 3D model collider height would change after a save+load.
+- Held weapon wouldn't enter custom 'holster' state when picking up a new weapon.
+- Removed another method for activating the secret xray feature (triggered when using 'settings set scale' in a loop script).
+- INCREMENT/DECREMENT fsm actions would add/subtract 1 if '0' was specified or if the specified variable was set to 0.
+- Another potential crash when loading a save, related to hud images.
+- Editor instability after duplicating custom modifiers.
+- Doors weren't being lit properly.
+- Decals weren't being lit properly.
+- A potential crash while loading map scripts.
+- Crash when 'image' fsm line was used with only one number.
+- Decoration/Enemy sprites were low-resolution in their editors, and the scale preview image would be tiny if idle0 wasn't imported in the same editor session.
+- Many potential crashes when the editor tried to save or load a number value.
+- Some potential editor crashes when trying to replace an asset file with itself (eg replacing armour1 sprite with the existing armour1.png in the project folder).
+- Projectile death animations only showed the first two frames.
+- Camera rotation wasn't saved properly.
+- Potential freeze/crash if the first frame of a state had a time of 0.
+- Hud images would persist when starting a new game or when loading a save where they weren't active.
+- Ammo would be kept when the player died, allowing ammo to be farmed infinitely.
+- Music started from a loop script would stop if another script was executed, even if the other script ended with map return 1/2.
+- Holding a key that was bound to a script which ended in map quickreturn while trying to open a door, toggle the map, or toggle the flashlight would cause those actions to be spammed many times per second.
+- Removed Malevich's art piece from the top-left corner of the map (uninitialised decals).
+- Viewbob speed could change after a save/load.
+- Transparent decals could cause rendering issues with the geometry behind them.
+- 'player rotation' command was rounding x/y values before applying them
+- Fixed 'critical script error' when indenting if/else statements
+- Fixed crash when db.txt existed but was empty
+- Fixed flicker at end of weapon HOLSTER state
+
+
 ## [2025-07-14_1655](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-07-14_1655.exe) : (1.11 alpha 46)
 
 ### Changes:
