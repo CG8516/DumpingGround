@@ -5,6 +5,29 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2025-12-02_1647](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-12-02_1647.exe) : (1.11 alpha 59)
+
+### Potentially breaking changes:
+- "entity delete [x] [y] [z]" will now delete all entities within the specified tile, including entities which aren't in the exact center of the tile.
+- "entity move [tileX] [tileY] [tileZ] [offsetX] [offsetY] [offsetZ]" no longer ignores tileZ, and will now move all entities within the tile, rather than moving one enemy exactly in the center of the tile.
+
+### Additions:
+- Added the left/center/right alignment option for labels (never existed but was falsely documented)
+- Added optional alignment for hud text (hud text [name] [string] [font size] [x] [y] [r] [g] [b] [layer] [alignment: left/center/right])
+- Added 'map' menu button functions, eg: mbutton [visible text] [x] [y] "map0" [menuPage], will start a new game on the first map (map0, map1, map2, etc..)
+
+### Changes:
+- Improved the security of Data.pak files (Nothing will ever be uncrackable, but the difficulty of creating an unpacker for alpha 59+ games has been raised)
+- Performance profiler now displays averages for the past 60 frames, rather than just the previous frame's stats.
+- Reduced performance impact of hud images / hud text when no masks are used (most noticable on low-spec laptops)
+
+### Fixes:
+- Potential collision-related crash
+- The occlusiontest setting didn't work
+- Potential crash when loading maps which contained deleted ammo/weapons
+- Improved reliability of raycasts against 3d models
+
+
 ## [2025-11-18_1735](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-11-18_1735.exe) : (1.11 alpha 58)
 
 ### Additions:
