@@ -5,6 +5,22 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [2025-12-02_1647](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-12-09-2129.exe) : (1.11 alpha 60)
+
+### Additions:
+- Added 'fsmdebug' cheat, which shows the current state, frame, and hp of all entities.
+
+### Fixes:
+- 'entity move/delete' could target an adjacent tile instead of the one specified.
+- Saving could sometimes add duplicate sounds to the save file, leading to possible audio issues after loading.
+- Scripted music didn't continue after loading.
+- Hud image blending was inconsistent with earlier versions.
+- Player would be in a corrupt state if no 'Player' object was placed on the map.
+- Crash if HUD/Cursor.png was missing.
+- Keys bound to scripts which ended with 'map quickreturn' could prevent that key being used for anything else (eg scripts bound to wasd could break walking).
+- Passing the -map argument to Game.exe with a map that didn't exist would cause the game to get stuck rendering a completely blank menu.
+
+
 ## [2025-12-02_1647](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-12-02_1647.exe) : (1.11 alpha 59)
 
 ### Potentially breaking changes:
