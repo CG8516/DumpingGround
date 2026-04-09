@@ -5,7 +5,10 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
-## [bugtest](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_bugtest.exe) : (1.11 bugtest)
+## [bugtest 2](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_bugtest2.exe) : (1.11 bugtest 2)
+- Fixes a possible Tiles.dat corruption when loading projects
+
+## bugtest (do not download) : (1.11 bugtest)
 There's *many* fixes, some changes, and a few QoL improvements.  
 To make things interesting (and to try and get people to thoroughly test/check every part of the engine), some of the changes and additions are a secret!  
 Consider this a very late easter egg hunt :)  
