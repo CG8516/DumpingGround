@@ -5,6 +5,107 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [bugtest](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_bugtest.exe) : (1.11 bugtest)
+There's *many* fixes, some changes, and a few QoL improvements.  
+To make things interesting (and to try and get people to thoroughly test/check every part of the engine), some of the changes and additions are a secret!  
+Consider this a very late easter egg hunt :)  
+
+There are some changes you should definitely know about though, because they could cause issues with existing games:
+- Terminal decorations now use the decoration's collider more accurately, so you may need to adjust the radius/scale of some terminal decorations to make them interactable again. (colliders cheat now shows terminal decoration colliders properly, which should help).
+- Setmaxhp/setmaxarmour commands now apply limits instantly, and will reduce hp/armour if it's above the max. (one game I tested had 'player setmaxhp 0' in a script, which now kills the player).
+- Hud images/text with a layer below 0 will now be rendered behind the default hud elements (hp, status, background, etc..).
+- 'light move', 'light offset' and 'light status' commands now affect 'all' lights in the specified tile. Previously it only affected the first light it found in the tile, which could change unpredictably each time the script was used.
+- 'light sun colour' now uses 0-255 rgb values instead of 0-1, improving consistency across commands.
+- Enemies would enter CHASE automatically, even if there was no jump to it. If you have an enemy with a custom fsm that's no longer chasing the player, make sure you have a jump to CHASE in it (eg 'state SEE CHASE 0').
+- mpeg1 .vid files now have working audio, so you may now have audio-doubling if you were playing an audio track at the same time as your video.
+
+And to make things a bit easier, here are some additions that I think probably wouldn't have been found:
+- The bind and unbind script commands now work with controller buttons (button names: c_dpadup, c_dpaddown, c_dpadleft, c_dpadright, c_start, c_select, c_a, c_b, c_x, c_y, c_l1, c_l2, c_l3, c_r1, c_r2, c_r3. a/b/x/y uses xbox layout)
+- SETTARGET fsm action, allowing you to set where an enemy should move towards (CHASE/HURT/FLEE will overwrite this) SETTARGET [x] [y] [z] [stop at target: 0/1, default = 1] [speed: default = enemy speed]
+- STOP fsm action, to stop entity movement from a custom state, without needing to jump to idle/hurt/dead.
+
+I'll leave the rest up to you to find :)  
+Have fun, and always make a backup before trying any new builds!
+
+Fixes:
+- Enemy blob shadows work again.
+- Potential crash when "shader set texture" was used with an invalid path/file.
+- Fixed scripts ending after using a #include
+- Crash when loading a game which contains a weapon/entity with an empty .states files.
+- Potential crash when loading a savefile in a game that has spaces in its name.
+- Crash if game had no key textures.
+- Potential crash if hp.dat had less than 4 entries.
+- Custom menu checkboxes didn't assign the default db variable.
+- Potential crash if a script tried to give/take/check keys/weapons/ammo with a non-existent ID.
+- Fixed slight misalignment with 'bg' images and videos when playing at a resolution other than 1280x720.
+- Barrier blocks were blocking bullets and projectiles.
+- 3D models in build mode wouldn't be visible until you scrolled to them, scrolled away, then scrolled back again.
+- Keybound scripts that ended with quickreturn could interfere with build mode controls (eg script bound to t/g could cause list to scroll very quickly)
+- Player height wasn't saved/loaded properly, and wouldn't reset when starting a new game.
+- More fsm errors are now caught and logged in startup.log instead of crashing.
+- Projectiles could pass through walls (and could hurt the player through thin walls).
+- Player was unable to jump if the ceiling was low and they had a high jump height.
+- Player could push their face through walls if they were crouched under a low ceiling.
+- Made player auto-ducking a bit more reliable.
+- Potential crash when loading a game that has exploding enemies.
+- Memory leak when loading sounds from a script.
+- Added a safety check when posteffects/renderscale is enabled, hopefully preventing crashes on unsupported gpu's (can't confirm if it's fixed, as I have no hardware experiencing this issue)
+- Decals are now rendered before entities, avoiding rendering issues with transparent entities.
+- Weapon scrolling didn't always match the currently held weapon.
+- Using 'MODELTEXTURE' in fsm could spam errors in startup.log if the optional params weren't specified.
+- Tiles with cubemap textures could have unnecessary interior faces when you place them next to each other (The whole texture was being checked for transparency, rather than just the visible faces).
+- Minimap is now scaled like the other hud elements at resolutions other than 1280x720.
+- Decals weren't being frustum culled.
+- Writing to arrays in FSM was unreliable.
+- Some errors were being logged incorrectly (eg "failed to convert '' to a number").
+- Random/intermittent crash if an enemy had a .states file with no valid state definitions.
+- Triangle custom modifiers could have weird UV stretching.
+- Animated models with animation smoothing enabled could render larger than they were supposed to when playing at a low fps.
+- If a script bind in the menu wasn't already bound when the game started, rebinding wouldn't work properly until after you restarted the game.
+- Rare script/state processing error caused by multiple spaces at the end of lines, with a comment after the spaces.
+- non-ascii text only worked in scripts if it had quotes around it.
+- The "double sided" checkbox for custom modifiers only affected the newest shape within the modifier, rather than all of them.
+- Many inconsistencies between the custom modifier preview and how the modifier actually appeared in game.
+- Rotating whole modifiers 90/-90 degrees didn't always work properly.
+- Modifier movement/rotation could cause slight imprecisions (eg each rotation could add/subtract 0.0001).
+- Pressing ctrl+s while "door type" was selected would set the door type to "side", because it starts with 's'.
+- Spawning an entity via fsm with "0,0,0 0,0" would cause the spawned entity to move slightly towards the player (caused by the z-fighting fix from alpha 45, but I'm using a better method now).
+- "enemieslifetime" option in config.ini has been fixed and renamed to "corpsetimer" (renamed because the default was 10, and everyone's games would have suddenly started making enemies disappear after death)
+- Crash when using mjpeg videos.
+- Potential crash with invalid .vid files (mpeg1 only supports a few framerates, and imgstreamcreator didn't detect when ffmpeg failed to convert).
+- Playing more than one video from a script would cause the other videos to be scaled incorrectly.
+- Fog distance/colour wasn't saved/loaded.
+- Input was sometimes processed when the game was in the background.
+- Transparency rendering issues on some amd gpu's.
+- "settings set scale" would zoom in/out instead of just adjusting the resolution, if used from the cheat console.
+- "settings set scale" was doing a lot of unnecessary work when the scale was already set to the desired value.
+- Clicking apply in the settings menu after using the "settings set scale" command would cause the current render scale to be saved to config.ini.
+- Player could float on the corners of custom modifiers.
+- Static lights weren't being saved correctly.
+- Bound scripts which ended with quickreturn could interrupt level transitions.
+- Resources for enemy states were being loaded more than once, causing excess memory usage and slower loading times for maps with enemies which had many high-resolution sprites.
+- Collision code was doing something stupid, which was hurting performance on maps with many enemies.
+- FSM actions directly after a MODELTEXTURE command could potentially be skipped.
+- Enemies without a HURT state could still be stun locked.
+- A couple of potential crashes if the player had a weapon with an invalid fsm.
+- Scripted sounds would stop the first time any non-map/loop script was run, even if they ended with return/quickreturn 2/3.
+- SETVAR RANDOM didn't work with variables (eg SETVAR x RANDOM($abc,$map.def)).
+- Tile frustum culling wasn't accurate, especially when looking down from a tall height.
+- Changing maps while in build mode would make the build UI disappear.
+- The lightingquality menu setting didn't let you choose all options from 0-5.
+- Fixed potential crash when using performance profiler.
+- Thin cylinder modifiers had broken/stretched textures.
+- Slope and circle modifiers didn't render when a cubemap texture was used.
+- UV stretching on some rectangle modifiers with cubemaps.
+- Lighting didn't work properly with 3d weapons.
+- Camera rotation speed was affected by frame rate when using a controller.
+- Moving your mouse when using a controller would cause the cursor to jump to the middle of the screen.
+- A few controller inputs could be spammed when held (dialogues, jumping, interaction).
+- Controllers couldn't press vn buttons.
+- Pressing 'escape' to cancel rebinding an input would unpause the game.
+- Fixed some tab indexes in the editor.
+
+
 ## [2025-12-09_2129](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-12-09-2129.exe) : (1.11 alpha 60)
 
 ### Additions:
