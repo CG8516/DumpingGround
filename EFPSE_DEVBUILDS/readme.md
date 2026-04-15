@@ -5,6 +5,37 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [bugtest 3](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_bugtest3.exe) : (1.11 bugtest 3)
+
+### Fixes:
+- Texture/entity/modifier lists were slow to load, scrolling through them was choppy, and they had a chance of randomly crashing when reloading (especially bad for projects with hundreds of textures/entities/modifiers).
+- De-mazimized the "Start Maximized" checkbox.
+- 'Pick' sprite wouldn't render if the crosshair sprite was missing.
+- '0' was being turned into '-0' in scripts.
+- Numbers starting with + weren't being processed correctly (eg +1 was invalid).
+- Decoration ceiling alignment was broken.
+- Blood decals were being culled too harshly.
+- Entities at the same position were z-fighting.
+- Multi-textured models sometimes had broken lighting (one of the textures was unintentionally being used as a normal map).
+- Tiles sometimes had emissive textures applied when they weren't supposed to.
+- PLAYERVISIBLE could sometimes falsely return true when on the same axis as the player.
+- Some modifiers had 'bumps' near the corners, which the player could get stuck on.
+- Rotated/thin rectangle modifiers with cubemaps had bad UV's.
+- Ctrl+drag deleting in the map editor didn't work if no tile/entity/modifier was selected.
+- Entities were incorrectly being culled by some modifiers.
+
+### Changes:
+- Renamed Game.dat to GameConfig.dat, to prevent older editor versions from opening (and corrupting) incompatible project files from newer editor versions.
+- Minor rendering performance improvements.
+- Fps counter now uses a rolling average of the last 60 frames, and is updated more frequently.
+
+### Additions:
+- Ctrl+Z in build mode will delete the last placed decoration.
+- SETVAR [variable] POINTVISIBLE [tileX] [tileY] [tileZ] (similar to PLAYERVISIBLE, but lets you check a specific location).
+- Holding shift while removing a tile will remove everything on the tile, rather than just the active type.
+- Enemies now have a 'disable culling' option like decorations.
+
+
 ## [bugtest 2](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_bugtest2.exe) : (1.11 bugtest 2)
 - Fixes a possible Tiles.dat corruption when loading projects
 
@@ -30,7 +61,7 @@ And to make things a bit easier, here are some additions that I think probably w
 I'll leave the rest up to you to find :)  
 Have fun, and always make a backup before trying any new builds!
 
-Fixes:
+### Fixes:
 - Enemy blob shadows work again.
 - Potential crash when "shader set texture" was used with an invalid path/file.
 - Fixed scripts ending after using a #include
@@ -267,6 +298,7 @@ Fixes:
 ## [2025-09-25_1802](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-09-25_1802.exe) : (1.11 alpha 51)
 ### Hotfix for alpha 50
 - Fixes a crash on maps with thousands of tiles/entities.
+
 
 ## [2025-09-25_0108](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_DEV_2025-09-25_0108.exe) : (1.11 alpha 50)
 ### Potentially breaking change:
