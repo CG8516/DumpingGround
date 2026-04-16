@@ -5,6 +5,18 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [bugtest 5](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_bugtest5.exe) : (1.11 bugtest 5)
+### Fixes:
+- Collision with rectangle and triangle modifiers was broken.
+- Modifiers named 'None' weren't being loaded by the engine.
+- Removed the 'S' that was overlaid on the 'duplicate map' button.
+- The tile, entity and modifier lists didn't change their background colour after changing between light/dark mode.
+- The tile/entity/modifier lists didn't have outlines around each item.
+- Potential crash when clicking a vn button during a map transition.
+
+### Changes:
+- Creating a new custom modifier or adding a shape to a modifier will now automatically select the new tile/shape.
+
 ## [bugtest 4](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_bugtest4.exe) : (1.11 bugtest 4)
 
 ### Fixes:
