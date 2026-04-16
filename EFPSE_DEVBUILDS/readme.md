@@ -5,6 +5,13 @@
 ### WARNING: THE LATEST UPDATES WILL MAKE YOUR MAP FILES INCOMPATIBLE WITH OLDER VERSIONS OF EFPSE.
 #### Maps will be automatically backed-up to 'Maps/mapname.eem_BeforeFormatUpdate' before conversion, but I still recommend that you backup your project first.
 
+## [bugtest 4](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_bugtest4.exe) : (1.11 bugtest 4)
+
+### Fixes:
+- Many lighting issues.
+- Games would instantly crash if 'posteffects' was enabled.
+
+
 ## [bugtest 3](https://github.com/CG8516/DumpingGround/raw/main/EFPSE_DEVBUILDS/EasyFPSEditor_CE_bugtest3.exe) : (1.11 bugtest 3)
 
 ### Fixes:
